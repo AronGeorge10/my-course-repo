@@ -101,3 +101,9 @@ class Enrollment(models.Model):
 #class Submission(models.Model):
 #    enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE)
 #    choices = models.ManyToManyField(Choice)
+
+# Question model
+class Question(models.Model):
+    Foreign key to course
+    Question text
+    Question grade
