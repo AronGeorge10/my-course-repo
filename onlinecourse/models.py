@@ -104,6 +104,9 @@ class Enrollment(models.Model):
 
 # Question model
 class Question(models.Model):
-    Foreign key to course
-    Question text
-    Question grade
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    content = models.CharField(max_length=200)
+    grade = models.IntegerField(default=50)
+
+    def __str__(self):
+        return "Question: " + self.content
